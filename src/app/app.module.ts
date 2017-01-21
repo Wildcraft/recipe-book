@@ -6,25 +6,28 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HearderCompComponent } from './hearder-comp.component';
 
-import { DropdownDirective } from './dropdown.directive';
 import { routing } from './app.route';
 
+//import { DropdownDirective } from './dropdown.directive';
+//import { HomeComponent } from './home.component';
+import { CoreModule } from './core.module';
 //import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 import { ShoppingListService } from './shopping-list/shopping-list.service';
-import { HomeComponent } from './home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HearderCompComponent,
-    DropdownDirective,
-    HomeComponent
+    //DropdownDirective,
+    //HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     //ShoppingListModule,
+    CoreModule,
     routing
   ],
   providers: [ShoppingListService],
